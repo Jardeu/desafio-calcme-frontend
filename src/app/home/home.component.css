@@ -1,0 +1,21 @@
+.mat-drawer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 30%;
+  border: 1px solid rgba(255, 255, 255, .2);
+  border-radius: 4px;
+  padding: 30px;
+}
+
+form {
+  display: contents;
+}

@@ -1,0 +1,24 @@
+<div class="mat-drawer-container">
+  <h1>Salvar Contato</h1>
+  <div class="form-wrapper">
+    <form [formGroup]="formContact">
+      <mat-form-field>
+        <mat-label>Nome</mat-label>
+        <input type="text" matInput formControlName="name" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>E-mail</mat-label>
+        <input type="email" matInput formControlName="email" placeholder="email@exemplo.com" required>
+        <mat-error *ngIf="formContact.controls['email'].invalid && formContact.controls['email'].errors?.['email']">
+          Digite um e-mail válido</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Telefone</mat-label>
+        <input type="text" matInput formControlName="phone" mask="(00) 00000-0000" maskPlaceholder="(00) 00000-0000"
+          required>
+      </mat-form-field>
+    </form>
+    <button type="submit" mat-raised-button (click)="saveContact()" color="primary"
+      [disabled]="!formContact.valid">Salvar</button>
+  </div>
+</div>
