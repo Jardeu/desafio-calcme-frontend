@@ -40,7 +40,7 @@ export class HomeComponent implements OnInit {
       .pipe(take(1))
       .subscribe({
         next: (response) => this.openSnackBar(response, "OK", "success-snackbar"),
-        error: (e) => this.openSnackBar(e, "OK", "error-snackbar"),
+        error: (e) => this.openSnackBar(e.message, "OK", "error-snackbar"),
       });
   }
 
